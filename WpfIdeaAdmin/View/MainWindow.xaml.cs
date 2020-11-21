@@ -24,6 +24,8 @@ namespace WpfIdeaAdmin.View
         public MainWindow()
         {
             InitializeComponent();
+            Console.WriteLine("it's working");
+
         }
     }
 }

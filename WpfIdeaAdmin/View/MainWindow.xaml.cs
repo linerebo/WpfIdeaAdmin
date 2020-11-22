@@ -25,6 +25,7 @@ namespace WpfIdeaAdmin.View
         {
             InitializeComponent();
             Console.WriteLine("it's working");
+            Console.WriteLine("test");
 
         }
     }

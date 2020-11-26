@@ -4,6 +4,15 @@
              xmlns:local="clr-namespace:WpfIdeaAdmin"
              StartupUri="View/MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="Button" x:Key="DesignButton">
+            <Setter Property="Background" Value="Teal"></Setter>
+        </Style>
+        <Style TargetType="Label" x:Key="DesignLabelHeader1"> 
+            <Setter Property="Foreground" Value="DarkBlue"></Setter>
+            <Setter Property="FontSize" Value="36"></Setter>
+        </Style>
+        <Style TargetType="Label" x:Key="DesignLabelHeader2">
+            <Setter Property="Foreground" Value="Teal"></Setter>
+        </Style>
     </Application.Resources>
 </Application>

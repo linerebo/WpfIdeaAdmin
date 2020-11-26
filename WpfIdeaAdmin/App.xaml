@@ -8,11 +8,19 @@
             <Setter Property="Background" Value="Teal"></Setter>
         </Style>
         <Style TargetType="Label" x:Key="DesignLabelHeader1"> 
-            <Setter Property="Foreground" Value="DarkBlue"></Setter>
+            <Setter Property="Foreground" Value="RoyalBlue"></Setter>
             <Setter Property="FontSize" Value="36"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
         </Style>
         <Style TargetType="Label" x:Key="DesignLabelHeader2">
             <Setter Property="Foreground" Value="Teal"></Setter>
+            <Setter Property="FontSize" Value="32"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        <Style TargetType="Label" x:Key="DesignLabelHeader3">
+            <Setter Property="Foreground" Value="MediumBlue"></Setter>
+            <Setter Property="FontSize" Value="32"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
         </Style>
     </Application.Resources>
 </Application>

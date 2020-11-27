@@ -10,8 +10,11 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="300"></ColumnDefinition>
             <ColumnDefinition Width="200"></ColumnDefinition>
-            <ColumnDefinition Width="600"></ColumnDefinition>
-            <ColumnDefinition Width="250"></ColumnDefinition>
+            <ColumnDefinition Width="20"></ColumnDefinition>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+            <ColumnDefinition Width="400"></ColumnDefinition>
+            <ColumnDefinition Width="20"></ColumnDefinition>
+            <ColumnDefinition Width="230"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="150"></RowDefinition>
@@ -28,12 +31,28 @@
             <RowDefinition Height="50"></RowDefinition>
             <RowDefinition Height="50"></RowDefinition>
         </Grid.RowDefinitions>
-        <Label Grid.Row="0" Grid.Column="2" 
-               Style="{StaticResource DesignLabelHeader1}" Content="   Administration ESKOB&#10;Gnistly IDEA Management"></Label>
+        <Label Grid.Row="0" Grid.Column="3" 
+               Style="{StaticResource DesignLabelHeader1}" Grid.ColumnSpan="2" Content="   Administration ESKOB&#10;Gnistly IDEA Management"></Label>
         <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource DesignLabelHeader2}" Content=" Kunder"></Label>
         <Label Grid.Row="1" Grid.Column="1" Style="{StaticResource DesignLabelHeader3}" Content=" Status"></Label>
-        <Label Grid.Row="1" Grid.Column="2" Style="{StaticResource DesignLabelHeader2}" Content=" Kundekort"></Label>
+        <Label Grid.Row="1" Grid.Column="3" Style="{StaticResource DesignLabelHeader2}" Content=" Kundekort"></Label>
         <ListView Grid.Row="2" Grid.Column="0" Grid.RowSpan="12" ItemsSource="{Binding Customers}"></ListView>
         <ListView Grid.Row="2" Grid.Column="1" Grid.RowSpan="12" ItemsSource="{Binding status}"></ListView>
+        <Label Grid.Row="2" Grid.Column="3" Content=" Navn:" Style="{StaticResource DesignLabelblack}"></Label>
+        <Label Grid.Row="3" Grid.Column="3" Content=" Adresse:" Style="{StaticResource DesignLabelblack}"></Label>
+        <Label Grid.Row="4" Grid.Column="3" Content=" Postnummer:" Style="{StaticResource DesignLabelblack}"></Label>
+        <Label Grid.Row="5" Grid.Column="3" Content=" By:" Style="{StaticResource DesignLabelblack}"></Label>
+        <Label Grid.Row="6" Grid.Column="3" Content=" e-mail:" Style="{StaticResource DesignLabelblack}"></Label>
+        <Label Grid.Row="7" Grid.Column="3" Content=" Telefon:" Style="{StaticResource DesignLabelblack}"></Label>
+        <TextBox Grid.Row="2" Grid.Column="4" Text="" Style="{StaticResource inputTextBox}"></TextBox>
+        <TextBox Grid.Row="3" Grid.Column="4" Text="" Style="{StaticResource inputTextBox}"></TextBox>
+        <TextBox Grid.Row="4" Grid.Column="4" Text="" Style="{StaticResource inputTextBox}"></TextBox>
+        <TextBox Grid.Row="5" Grid.Column="4" Text="" Style="{StaticResource inputTextBox}"></TextBox>
+        <TextBox Grid.Row="6" Grid.Column="4" Text="" Style="{StaticResource inputTextBox}"></TextBox>
+        <TextBox Grid.Row="7" Grid.Column="4" Text="" Style="{StaticResource inputTextBox}"></TextBox>
+        <Button Grid.Row="1" Grid.Column="6" Content="Tilføj kunde" Style="{StaticResource DesignButton}"></Button>
+        <Button Grid.Row="3" Grid.Column="6" Content="Lave URL" Style="{StaticResource DesignButton}"></Button>
+        <Button Grid.Row="5" Grid.Column="6" Content="Ændre kunde" Style="{StaticResource DesignButton}"></Button>
+        <Button Grid.Row="7" Grid.Column="6" Content="Deaktiver kunde" Style="{StaticResource DesignButton}"></Button>
     </Grid>
 </Window>

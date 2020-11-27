@@ -6,6 +6,17 @@
     <Application.Resources>
         <Style TargetType="Button" x:Key="DesignButton">
             <Setter Property="Background" Value="Teal"></Setter>
+            <Setter Property="FontSize" Value="28"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="15" Background="Teal" BorderThickness="1" Padding="2">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
         <Style TargetType="Label" x:Key="DesignLabelHeader1"> 
             <Setter Property="Foreground" Value="RoyalBlue"></Setter>
@@ -21,6 +32,14 @@
             <Setter Property="Foreground" Value="MediumBlue"></Setter>
             <Setter Property="FontSize" Value="32"></Setter>
             <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        <Style TargetType="Label" x:Key="DesignLabelblack">
+            <Setter Property="FontSize" Value="28"></Setter>
+            <Setter Property="Background" Value="LightYellow"></Setter>
+        </Style>
+        <Style TargetType="TextBox" x:Key="inputTextBox">
+            <Setter Property="FontSize" Value="25"></Setter>
+            <Setter Property="Background" Value="LightYellow"></Setter>
         </Style>
     </Application.Resources>
 </Application>

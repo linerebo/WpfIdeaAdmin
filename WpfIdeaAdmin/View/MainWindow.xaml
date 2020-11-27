@@ -50,7 +50,7 @@
         <TextBox Grid.Row="5" Grid.Column="4" Text="" Style="{StaticResource inputTextBox}"></TextBox>
         <TextBox Grid.Row="6" Grid.Column="4" Text="" Style="{StaticResource inputTextBox}"></TextBox>
         <TextBox Grid.Row="7" Grid.Column="4" Text="" Style="{StaticResource inputTextBox}"></TextBox>
-        <Button Grid.Row="1" Grid.Column="6" Content="Tilføj kunde" Style="{StaticResource DesignButton}"></Button>
+        <Button Grid.Row="1" Grid.Column="6" Content="Tilføj kunde" Style="{StaticResource DesignButton}" Command="{Binding AddCustomerCmd}"></Button>
         <Button Grid.Row="3" Grid.Column="6" Content="Lave URL" Style="{StaticResource DesignButton}"></Button>
         <Button Grid.Row="5" Grid.Column="6" Content="Ændre kunde" Style="{StaticResource DesignButton}"></Button>
         <Button Grid.Row="7" Grid.Column="6" Content="Deaktiver kunde" Style="{StaticResource DesignButton}"></Button>

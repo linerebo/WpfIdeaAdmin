@@ -14,7 +14,7 @@ namespace WpfIdeaAdmin.ViewModel
         public ICommand AddCustomerCmd => new CustomerCommand(
             () =>
             {
-                Console.WriteLine("this is with ICommand!");
+                Console.WriteLine("This is with ICommand!");
                 Slide2 slide2 = new Slide2();
                 slide2.Show();
             });

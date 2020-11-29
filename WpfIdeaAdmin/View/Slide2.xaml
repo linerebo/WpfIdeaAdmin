@@ -11,8 +11,8 @@
             <ColumnDefinition Width="60"></ColumnDefinition>
             <ColumnDefinition Width="200"></ColumnDefinition>
             <ColumnDefinition Width="300"></ColumnDefinition>
-            
-            <ColumnDefinition Width="300"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="200"></ColumnDefinition>
             <ColumnDefinition Width="300"></ColumnDefinition>
             <ColumnDefinition Width="20"></ColumnDefinition>
             <ColumnDefinition Width="230"></ColumnDefinition>
@@ -33,7 +33,7 @@
             <RowDefinition Height="50"></RowDefinition>
         </Grid.RowDefinitions>
         <Label Grid.Row="0" Grid.Column="3" 
-               Style="{StaticResource DesignLabelHeader1}" Grid.ColumnSpan="2" Content="   Administration ESKOB&#10;Gnistly IDEA Management"></Label>
+               Style="{StaticResource DesignLabelHeader1}" Grid.ColumnSpan="3" Content="   Administration ESKOB&#10;Gnistly IDEA Management"></Label>
         <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Content=" Tilføj ny kunde:" Style="{StaticResource DesignLabelHeader2}" ></Label>
         <Label Grid.Row="2" Grid.Column="1" Content=" Navn:" Style="{StaticResource DesignLabelblack}"></Label>
         <Label Grid.Row="3" Grid.Column="1" Content=" Adresse:" Style="{StaticResource DesignLabelblack}"></Label>
@@ -41,12 +41,12 @@
         <Label Grid.Row="5" Grid.Column="1" Content=" By:" Style="{StaticResource DesignLabelblack}"></Label>
         <Label Grid.Row="6" Grid.Column="1" Content=" e-mail:" Style="{StaticResource DesignLabelblack}"></Label>
         <Label Grid.Row="7" Grid.Column="1" Content=" Telefon:" Style="{StaticResource DesignLabelblack}"></Label>
-        <TextBox Grid.Row="2" Grid.Column="2" Text="" Style="{StaticResource inputTextBox}"></TextBox>
-        <TextBox Grid.Row="3" Grid.Column="2" Text="" Style="{StaticResource inputTextBox}"></TextBox>
-        <TextBox Grid.Row="4" Grid.Column="2" Text="" Style="{StaticResource inputTextBox}"></TextBox>
-        <TextBox Grid.Row="5" Grid.Column="2" Text="" Style="{StaticResource inputTextBox}"></TextBox>
-        <TextBox Grid.Row="6" Grid.Column="2" Text="" Style="{StaticResource inputTextBox}"></TextBox>
-        <TextBox Grid.Row="7" Grid.Column="2" Text="" Style="{StaticResource inputTextBox}"></TextBox>
+        <TextBox Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Text="" Style="{StaticResource inputTextBox}"></TextBox>
+        <TextBox Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Text="" Style="{StaticResource inputTextBox}"></TextBox>
+        <TextBox Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Text="" Style="{StaticResource inputTextBox}"></TextBox>
+        <TextBox Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" Text="" Style="{StaticResource inputTextBox}"></TextBox>
+        <TextBox Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" Text="" Style="{StaticResource inputTextBox}"></TextBox>
+        <TextBox Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" Text="" Style="{StaticResource inputTextBox}"></TextBox>
         
         <Viewbox Height="40" Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left">
             <RadioButton GroupName="1" Content=" Gem data på ESKOBs server" ></RadioButton>
@@ -54,7 +54,7 @@
         <Viewbox Height="40" Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left">
             <RadioButton GroupName="1" Content=" Gem data på kundens server" ></RadioButton>
         </Viewbox>
-        <Button Grid.Row="2" Grid.Column="4" Content="Gem" Style="{StaticResource DesignButton}"></Button>
-        <Button Grid.Row="4" Grid.Column="4" Content="Fortryd" Style="{StaticResource DesignButton}"></Button>
+        <Button Grid.Row="2" Grid.Column="5" Content="Gem" Style="{StaticResource DesignButton}"></Button>
+        <Button Grid.Row="4" Grid.Column="5" Content="Fortryd" Style="{StaticResource DesignButton}"></Button>
     </Grid>
 </Window>

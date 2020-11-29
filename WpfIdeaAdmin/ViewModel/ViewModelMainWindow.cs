@@ -18,5 +18,6 @@ namespace WpfIdeaAdmin.ViewModel
                 Slide2 slide2 = new Slide2();
                 slide2.Show();
             });
+
     }
 }

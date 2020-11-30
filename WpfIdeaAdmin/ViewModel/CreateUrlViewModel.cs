@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfIdeaAdmin.ViewModel
 {
-    public class ViewModelSlide2
+    public class CreateUrlViewModel
     {
     }
 }

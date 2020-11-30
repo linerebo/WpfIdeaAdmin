@@ -14,24 +14,16 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfIdeaAdmin.View
-
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CreateUrlView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CreateUrlView : UserControl
     {
-        public MainWindow()
+        public CreateUrlView()
         {
             InitializeComponent();
-            this.DataContext = new ViewModel.ViewModelMainWindow();
-
-            Console.WriteLine("it's working");
-            Console.WriteLine("test");
-
-            //store current window in public variable ContentControlRef
-            ((App)App.Current).ContentControlRef = this.mainContent;
-            this.mainContent.Content = new WelcomeMenuView();
+            this.DataContext = new ViewModel.CreateUrlViewModel();
         }
     }
 }

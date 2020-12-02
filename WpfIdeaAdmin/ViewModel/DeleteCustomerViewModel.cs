@@ -9,15 +9,21 @@ using WpfIdeaAdmin.ViewModel.Commands;
 
 namespace WpfIdeaAdmin.ViewModel
 {
-    public class CreateUrlViewModel
+    class DeleteCustomerViewModel
     {
-        public ICommand SendCmd => new CustomerCommand(
+        public ICommand DeactivateCmd => new CustomerCommand(
             () =>
             {
                 ((App)App.Current).ContentControlRef.Content = new WelcomeMenuView();
             });
 
         public ICommand CancelCmd => new CustomerCommand(
+            () =>
+            {
+                ((App)App.Current).ContentControlRef.Content = new WelcomeMenuView();
+            });
+
+        public ICommand DeleteCmd => new CustomerCommand(
             () =>
             {
                 ((App)App.Current).ContentControlRef.Content = new WelcomeMenuView();

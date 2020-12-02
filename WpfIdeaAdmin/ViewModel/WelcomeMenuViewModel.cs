@@ -38,13 +38,13 @@ namespace WpfIdeaAdmin.ViewModel
         public ICommand EditCustomerCmd => new CustomerCommand(
             () =>
             {
-                ((App)App.Current).ContentControlRef.Content = new AddCustomerView();
+                ((App)App.Current).ContentControlRef.Content = new EditCustomerView();
             });
 
         public ICommand DeactivateCustomerCmd => new CustomerCommand(
             () =>
             {
-                ((App)App.Current).ContentControlRef.Content = new AddCustomerView();
+                ((App)App.Current).ContentControlRef.Content = new DeleteCustomerView();
             });
     }
 }

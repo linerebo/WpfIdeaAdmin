@@ -63,6 +63,8 @@
     <Compile Include="ViewModel\AddCustomerViewModel.cs" />
     <Compile Include="ViewModel\Commands\CustomerCommand.cs" />
     <Compile Include="ViewModel\CreateUrlViewModel.cs" />
+    <Compile Include="ViewModel\DeleteCustomerViewModel.cs" />
+    <Compile Include="ViewModel\EditCustomerViewModel.cs" />
     <Compile Include="ViewModel\ViewModelMainWindow.cs" />
     <Compile Include="ViewModel\WelcomeMenuViewModel.cs" />
     <Compile Include="View\AddCustomerView.xaml.cs">
@@ -70,6 +72,12 @@
     </Compile>
     <Compile Include="View\CreateUrlView.xaml.cs">
       <DependentUpon>CreateUrlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DeleteCustomerView.xaml.cs">
+      <DependentUpon>DeleteCustomerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\EditCustomerView.xaml.cs">
+      <DependentUpon>EditCustomerView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\WelcomeMenuView.xaml.cs">
       <DependentUpon>WelcomeMenuView.xaml</DependentUpon>
@@ -79,6 +87,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\CreateUrlView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DeleteCustomerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\EditCustomerView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

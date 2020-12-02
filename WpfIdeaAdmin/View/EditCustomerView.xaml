@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="WpfIdeaAdmin.View.CreateUrlView"
+﻿<UserControl x:Class="WpfIdeaAdmin.View.EditCustomerView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -13,8 +13,8 @@
             <ColumnDefinition Width="300"></ColumnDefinition>
             <ColumnDefinition Width="100"></ColumnDefinition>
             <ColumnDefinition Width="200"></ColumnDefinition>
-            <ColumnDefinition Width="50"></ColumnDefinition>
             <ColumnDefinition Width="300"></ColumnDefinition>
+            <ColumnDefinition Width="20"></ColumnDefinition>
             <ColumnDefinition Width="230"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -33,8 +33,8 @@
             <RowDefinition Height="50"></RowDefinition>
         </Grid.RowDefinitions>
         <Label Grid.Row="0" Grid.Column="3" 
-               Style="{StaticResource DesignLabelHeader1}" Grid.ColumnSpan="4" Content="   Administration ESKOB&#10;Gnistly IDEA Management"></Label>
-        <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Content=" Lave URL til kunde:" Style="{StaticResource DesignLabelHeader2}" ></Label>
+               Style="{StaticResource DesignLabelHeader1}" Grid.ColumnSpan="3" Content="   Administration ESKOB&#10;Gnistly IDEA Management"></Label>
+        <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Content=" Ændre kunde info:" Style="{StaticResource DesignLabelHeader2}" ></Label>
         <Label Grid.Row="2" Grid.Column="1" Content=" Navn:" Style="{StaticResource DesignLabelblack}"></Label>
         <Label Grid.Row="3" Grid.Column="1" Content=" Adresse:" Style="{StaticResource DesignLabelblack}"></Label>
         <Label Grid.Row="4" Grid.Column="1" Content=" Postnummer:" Style="{StaticResource DesignLabelblack}"></Label>
@@ -47,11 +47,15 @@
         <TextBox Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" Text="" Style="{StaticResource inputTextBox}"></TextBox>
         <TextBox Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" Text="" Style="{StaticResource inputTextBox}"></TextBox>
         <TextBox Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" Text="" Style="{StaticResource inputTextBox}"></TextBox>
-        <Button Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="2" Content="Lav URL" Style="{StaticResource DesignButton}"></Button>
-        <Label Grid.Row="11" Grid.Column="1" Grid.ColumnSpan="4" Style="{StaticResource DesignLabelblack}"></Label>
 
-        <Button Grid.Row="9" Grid.Column="6" Content="Sende" Style="{StaticResource DesignButton}" Command="{Binding SendCmd}"></Button>
-        <Button Grid.Row="11" Grid.Column="6" Content="Fortryd" Style="{StaticResource DesignButton}" Command="{Binding CancelCmd}"></Button>
+        <Viewbox Height="40" Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left">
+            <RadioButton GroupName="1" Content=" Gem data på ESKOBs server" ></RadioButton>
+        </Viewbox>
+        <Viewbox Height="40" Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left">
+            <RadioButton GroupName="1" Content=" Gem data på kundens server" ></RadioButton>
+        </Viewbox>
+        <Button Grid.Row="2" Grid.Column="5" Content="Gem" Style="{StaticResource DesignButton}" Command="{Binding SaveCmd}"></Button>
+        <Button Grid.Row="4" Grid.Column="5" Content="Fortryd" Style="{StaticResource DesignButton}" Command="{Binding CancelCmd}"></Button>
             
     </Grid>
 </UserControl>

@@ -9,9 +9,9 @@ using WpfIdeaAdmin.ViewModel.Commands;
 
 namespace WpfIdeaAdmin.ViewModel
 {
-    public class CreateUrlViewModel
+    class EditCustomerViewModel
     {
-        public ICommand SendCmd => new CustomerCommand(
+        public ICommand SaveCmd => new CustomerCommand(
             () =>
             {
                 ((App)App.Current).ContentControlRef.Content = new WelcomeMenuView();

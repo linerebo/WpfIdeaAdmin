@@ -17,19 +17,10 @@ namespace WpfIdeaAdmin.ViewModel
         {
             MyCustomers = new List<Customer>();
 
-            Customer customer1 = new Customer();
-            customer1.Name = "Slikbutikken";
-            customer1.Status = true;
-
-            Customer customer2 = new Customer();
-            customer2.Name = "SkoShop";
-            customer2.Status = false;
-
-            MyCustomers.Add(customer1);
-            MyCustomers.Add(customer2);
-
+            MyCustomers.Add(new Customer() { Name = "Idefabrikken", Street = "Hovedgaden", Mail = "ide@mail.com", Phone = "123456789", Zipcode = "6000", City = "Lilleby", Status = true }) ;
+            MyCustomers.Add(new Customer() { Name = "Slikbutikken", Street = "Hovedgaden", Mail = "is@mail.com", Phone = "123456789", Zipcode = "9000", City = "Storeby", Status = true });
+            MyCustomers.Add(new Customer() { Name = "Skoshop", Street = "Hovedgaden", Mail = "sko@mail.com", Phone = "123456789", Zipcode = "2000", City = "Mellemby", Status = false });
         }
-        
         
 
         public ICommand AddCustomerCmd => new CustomerCommand(

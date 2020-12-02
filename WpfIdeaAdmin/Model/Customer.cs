@@ -57,5 +57,12 @@ namespace WpfIdeaAdmin.Model
             get { return zipcode; }
             set { zipcode = value;  this.propertyIsChanged(); }
         }
+
+        private string city;
+        public string City
+        {
+            get { return city; }
+            set { city = value; this.propertyIsChanged(); }
+        }
     }
 }

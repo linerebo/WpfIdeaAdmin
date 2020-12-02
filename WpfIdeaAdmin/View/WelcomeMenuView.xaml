@@ -8,8 +8,8 @@
              d:DesignHeight="850" d:DesignWidth="1400">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300"></ColumnDefinition>
-            <ColumnDefinition Width="200"></ColumnDefinition>
+            <ColumnDefinition Width="450"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
             <ColumnDefinition Width="20"></ColumnDefinition>
             <ColumnDefinition Width="200"></ColumnDefinition>
             <ColumnDefinition Width="400"></ColumnDefinition>
@@ -34,10 +34,17 @@
         <Label Grid.Row="0" Grid.Column="3" 
                Style="{StaticResource DesignLabelHeader1}" Grid.ColumnSpan="2" Content="   Administration ESKOB&#10;Gnistly IDEA Management"></Label>
         <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource DesignLabelHeader2}" Content=" Kunder"></Label>
-        <Label Grid.Row="1" Grid.Column="1" Style="{StaticResource DesignLabelHeader3}" Content=" Status"></Label>
+        
         <Label Grid.Row="1" Grid.Column="3" Style="{StaticResource DesignLabelHeader2}" Content=" Kundekort"></Label>
-        <ListView Grid.Row="2" Grid.Column="0" Grid.RowSpan="12" ItemsSource="{Binding Customers}"></ListView>
-        <ListView Grid.Row="2" Grid.Column="1" Grid.RowSpan="12" ItemsSource="{Binding status}"></ListView>
+        <ListView Grid.Row="2" Grid.Column="0" Grid.RowSpan="12" ItemsSource="{Binding MyCustomers}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Name}" Header="Name" Width="220"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Status}" Header="Status" Width="100"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        
         <Label Grid.Row="2" Grid.Column="3" Content=" Navn:" Style="{StaticResource DesignLabelblack}"></Label>
         <Label Grid.Row="3" Grid.Column="3" Content=" Adresse:" Style="{StaticResource DesignLabelblack}"></Label>
         <Label Grid.Row="4" Grid.Column="3" Content=" Postnummer:" Style="{StaticResource DesignLabelblack}"></Label>

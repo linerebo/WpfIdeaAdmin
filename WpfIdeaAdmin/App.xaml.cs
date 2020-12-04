@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using WpfIdeaAdmin.ViewModel;
 
 namespace WpfIdeaAdmin
 {
@@ -15,5 +16,6 @@ namespace WpfIdeaAdmin
     public partial class App : Application
     {
         public ContentControl ContentControlRef { get; set; } = null;
+        public AdministratorViewModel viewmodel = new AdministratorViewModel();
     }
 }

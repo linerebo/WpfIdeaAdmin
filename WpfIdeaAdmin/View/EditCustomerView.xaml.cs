@@ -23,7 +23,7 @@ namespace WpfIdeaAdmin.View
         public EditCustomerView()
         {
             InitializeComponent();
-            this.DataContext = new ViewModel.EditCustomerViewModel();
+            this.DataContext = ((App)App.Current).viewmodel;
         }
     }
 }

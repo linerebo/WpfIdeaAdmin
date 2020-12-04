@@ -23,15 +23,14 @@ namespace WpfIdeaAdmin.View
     {
         public MainWindow()
         {
+            
             InitializeComponent();
-            this.DataContext = new ViewModel.ViewModelMainWindow();
-
-            Console.WriteLine("it's working");
-            Console.WriteLine("test");
+            this.DataContext = ((App)App.Current).viewmodel;
 
             //store current window in public variable ContentControlRef
             ((App)App.Current).ContentControlRef = this.mainContent;
             this.mainContent.Content = new WelcomeMenuView();
+            
         }
     }
 }

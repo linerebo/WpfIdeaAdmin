@@ -51,7 +51,7 @@
         <Label Grid.Row="5" Grid.Column="3" Content=" By:" Style="{StaticResource DesignLabelblack}"></Label>
         <Label Grid.Row="6" Grid.Column="3" Content=" e-mail:" Style="{StaticResource DesignLabelblack}"></Label>
         <Label Grid.Row="7" Grid.Column="3" Content=" Telefon:" Style="{StaticResource DesignLabelblack}"></Label>
-        <Label Content="{Binding ElementName=lvCustomers, Path=SelectedItem.Name}" Grid.Row="2" Grid.Column="4" Style="{StaticResource DesignLabelblack}"></Label>
+        <Label x:Name="lbCustomerName" Content="{Binding ElementName=lvCustomers, Path=SelectedItem.Name}" Grid.Row="2" Grid.Column="4" Style="{StaticResource DesignLabelblack}"></Label>
         <Label Content="{Binding ElementName=lvCustomers, Path=SelectedItem.Street}" Grid.Row="3" Grid.Column="4" Style="{StaticResource DesignLabelblack}"></Label>
         <Label Content="{Binding ElementName=lvCustomers, Path=SelectedItem.Zipcode}" Grid.Row="4" Grid.Column="4" Style="{StaticResource DesignLabelblack}"></Label>
         <Label Content="{Binding ElementName=lvCustomers, Path=SelectedItem.City}" Grid.Row="5" Grid.Column="4" Style="{StaticResource DesignLabelblack}"></Label>

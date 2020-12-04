@@ -61,6 +61,7 @@
     <Compile Include="Model\Bindable.cs" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="ViewModel\AddCustomerViewModel.cs" />
+    <Compile Include="ViewModel\AdministratorViewModel.cs" />
     <Compile Include="ViewModel\Commands\CustomerCommand.cs" />
     <Compile Include="ViewModel\CreateUrlViewModel.cs" />
     <Compile Include="ViewModel\DeleteCustomerViewModel.cs" />

@@ -26,7 +26,7 @@ namespace WpfIdeaAdmin.View
         public WelcomeMenuView()
         {
             InitializeComponent();
-            this.DataContext = new ViewModel.WelcomeMenuViewModel();  
+            this.DataContext = ((App)App.Current).viewmodel;
         }
     }
 }

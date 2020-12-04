@@ -23,7 +23,7 @@ namespace WpfIdeaAdmin.View
         public DeleteCustomerView()
         {
             InitializeComponent();
-            this.DataContext = new ViewModel.DeleteCustomerViewModel();
+            this.DataContext = ((App)App.Current).viewmodel;
         }
     }
 }

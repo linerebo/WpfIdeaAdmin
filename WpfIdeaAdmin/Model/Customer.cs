@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WpfIdeaAdmin.Model
 {
-    public class Customer : Bindable 
+    public class Customer : Bindable
     {
         private List<Customer> _customers;
         public List<Customer> Customers
@@ -15,7 +15,7 @@ namespace WpfIdeaAdmin.Model
             get { return _customers; }
             set { _customers = value; this.propertyIsChanged(); }
         }
-        
+
         private string name;
         public string Name
         {

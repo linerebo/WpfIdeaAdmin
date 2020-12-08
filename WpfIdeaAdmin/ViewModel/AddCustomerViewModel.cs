@@ -14,13 +14,13 @@ namespace WpfIdeaAdmin.ViewModel
         public ICommand SaveCmd => new CustomerCommand(
             () =>
             {
-                ((App)App.Current).ContentControlRef.Content = new WelcomeMenuView();
+                ((App)App.Current).ContentControlRef.Content = new AddCustomerView();
             });
 
         public ICommand CancelCmd => new CustomerCommand(
             () =>
             {
-                ((App)App.Current).ContentControlRef.Content = new WelcomeMenuView();
+                ((App)App.Current).ContentControlRef.Content = new AddCustomerView();
             });
     }
 }

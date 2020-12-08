@@ -16,6 +16,13 @@ namespace WpfIdeaAdmin.Model
             set { _customers = value; this.propertyIsChanged(); }
         }
 
+        private int customerID;
+        public int CustomerID
+        {
+            get { return customerID; }
+            set { customerID = value; this.propertyIsChanged(); }
+        }
+
         private string name;
         public string Name
         {

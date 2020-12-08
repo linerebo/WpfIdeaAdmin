@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WpfIdeaAdmin.View"
              mc:Ignorable="d" 
-             d:DesignHeight="850" d:DesignWidth="1400">
+             d:DesignHeight="800" d:DesignWidth="1400">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="450"></ColumnDefinition>
@@ -34,17 +34,18 @@
         <Label Grid.Row="0" Grid.Column="3" 
                Style="{StaticResource DesignLabelHeader1}" Grid.ColumnSpan="2" Content="   Administration ESKOB&#10;Gnistly IDEA Management"></Label>
         <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource DesignLabelHeader2}" Content=" Kunder"></Label>
-        
+
         <Label Grid.Row="1" Grid.Column="3" Style="{StaticResource DesignLabelHeader2}" Content=" Kundekort"></Label>
         <ListView x:Name="lvCustomers" Grid.Row="2" Grid.Column="0" Grid.RowSpan="12" ItemsSource="{Binding MyCustomers}" SelectedItem="{Binding SelectedCustomer}">
             <ListView.View>
                 <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding CustomerID}" Header="ID" Width="50"></GridViewColumn>
                     <GridViewColumn DisplayMemberBinding="{Binding Name}" Header="Name" Width="220"></GridViewColumn>
                     <GridViewColumn DisplayMemberBinding="{Binding Status}" Header="Status" Width="100"></GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
-        
+
         <Label Grid.Row="2" Grid.Column="3" Content=" Navn:" Style="{StaticResource DesignLabelblack}"></Label>
         <Label Grid.Row="3" Grid.Column="3" Content=" Adresse:" Style="{StaticResource DesignLabelblack}"></Label>
         <Label Grid.Row="4" Grid.Column="3" Content=" Postnummer:" Style="{StaticResource DesignLabelblack}"></Label>
@@ -61,5 +62,6 @@
         <Button Grid.Row="3" Grid.Column="6" Content="Lave URL" Style="{StaticResource DesignButton}" Command="{Binding CreateURLCmd}"></Button>
         <Button Grid.Row="5" Grid.Column="6" Content="Ændre kunde" Style="{StaticResource DesignButton}" Command="{Binding EditCustomerCmd}"></Button>
         <Button Grid.Row="7" Grid.Column="6" Content="Deaktiver kunde" Style="{StaticResource DesignButton}" Command="{Binding DeactivateCustomerCmd}"></Button>
+
     </Grid>
 </UserControl>

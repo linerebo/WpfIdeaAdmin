@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfIdeaAdmin.Model;
 
 namespace WpfIdeaAdmin.View
 
@@ -30,6 +31,8 @@ namespace WpfIdeaAdmin.View
             //store current window in public variable ContentControlRef
             ((App)App.Current).ContentControlRef = this.mainContent;
             this.mainContent.Content = new WelcomeMenuView();
+            ApiHelper testAPI = new ApiHelper();
+            testAPI.getCustomers();
             
         }
     }

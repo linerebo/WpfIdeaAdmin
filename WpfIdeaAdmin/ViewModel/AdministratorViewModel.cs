@@ -19,9 +19,9 @@ namespace WpfIdeaAdmin.ViewModel
         {
             MyCustomers = new List<Customer>();
 
-            MyCustomers.Add(new Customer() { Name = "Idefabrikken", Street = "Hovedgaden", Mail = "ide@mail.com", Phone = "123456789", Zipcode = "6000", City = "Lilleby", Status = true });
-            MyCustomers.Add(new Customer() { Name = "Slikbutikken", Street = "Hovedgaden", Mail = "is@mail.com", Phone = "123456789", Zipcode = "9000", City = "Storeby", Status = true });
-            MyCustomers.Add(new Customer() { Name = "Skoshop", Street = "Hovedgaden", Mail = "sko@mail.com", Phone = "123456789", Zipcode = "2000", City = "Mellemby", Status = false });
+            MyCustomers.Add(new Customer() { CustomerID = 20, Name = "Idefabrikken", Street = "Hovedgaden", Mail = "ide@mail.com", Phone = "123456789", Zipcode = "6000", City = "Lilleby", Status = true }) ;
+            MyCustomers.Add(new Customer() {CustomerID = 21, Name = "Slikbutikken", Street = "Hovedgaden", Mail = "is@mail.com", Phone = "123456789", Zipcode = "9000", City = "Storeby", Status = true });
+            MyCustomers.Add(new Customer() {CustomerID = 22, Name = "Skoshop", Street = "Hovedgaden", Mail = "sko@mail.com", Phone = "123456789", Zipcode = "2000", City = "Mellemby", Status = false });
         }
 
 

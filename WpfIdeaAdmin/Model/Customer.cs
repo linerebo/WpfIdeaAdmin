@@ -16,53 +16,53 @@ namespace WpfIdeaAdmin.Model
             set { _customers = value; this.propertyIsChanged(); }
         }
 
-        private int customerID;
+        private int _customerID;
         public int CustomerID
         {
-            get { return customerID; }
-            set { customerID = value; this.propertyIsChanged(); }
+            get { return _customerID; }
+            set { _customerID = value; this.propertyIsChanged(); }
         }
 
-        private string name;
-        public string Name
+        private string _customername;
+        public string CustomerName
         {
-            get { return name; }
-            set{ name = value; this.propertyIsChanged(); }
+            get { return _customername; }
+            set{ _customername = value; this.propertyIsChanged(); }
         }
 
-        private string mail;
-        public string Mail
+        private string _customerMail;
+        public string CustomerMail
         {
-            get { return mail; }
-            set { mail = value; this.propertyIsChanged(); }
+            get { return _customerMail; }
+            set { _customerMail = value; this.propertyIsChanged(); }
         }
 
-        private bool status;
-        public bool Status
+        private bool _customerStatus;
+        public bool CustomerStatus
         {
-            get { return status; }
-            set { status = value; this.propertyIsChanged(); }
+            get { return _customerStatus; }
+            set { _customerStatus = value; this.propertyIsChanged(); }
         }
 
-        private string phone;
-        public string Phone
+        private string _customerPhone;
+        public string CustomerPhone
         {
-            get { return phone; }
-            set { phone = value; this.propertyIsChanged(); }
+            get { return _customerPhone; }
+            set { _customerPhone = value; this.propertyIsChanged(); }
         }
 
-        private string street;
-        public string Street
+        private string _customerStreet;
+        public string CustomerStreet
         {
-            get { return street; }
-            set { street = value; this.propertyIsChanged(); }
+            get { return _customerStreet; }
+            set { _customerStreet = value; this.propertyIsChanged(); }
         }
 
-        private string zipcode;
-        public string Zipcode
+        private string _zipCode;
+        public string Zip
         {
-            get { return zipcode; }
-            set { zipcode = value;  this.propertyIsChanged(); }
+            get { return _zipCode; }
+            set { _zipCode = value;  this.propertyIsChanged(); }
         }
 
         private string city;

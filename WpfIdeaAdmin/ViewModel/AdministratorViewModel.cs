@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,16 +13,20 @@ namespace WpfIdeaAdmin.ViewModel
 {
     public class AdministratorViewModel
     {
-        public List<Customer> MyCustomers { get; set; }
+        public List<Customer> MyCustomerList { get; set; }
         public Customer SelectedCustomer { get; set; }
-
+        public Model.ApiHelper apiHelperSingleton { get; set; }
+        
         public AdministratorViewModel()
         {
-            MyCustomers = new List<Customer>();
-
-            MyCustomers.Add(new Customer() { CustomerID = 20, Name = "Idefabrikken", Street = "Hovedgaden", Mail = "ide@mail.com", Phone = "123456789", Zipcode = "6000", City = "Lilleby", Status = true }) ;
-            MyCustomers.Add(new Customer() {CustomerID = 21, Name = "Slikbutikken", Street = "Hovedgaden", Mail = "is@mail.com", Phone = "123456789", Zipcode = "9000", City = "Storeby", Status = true });
-            MyCustomers.Add(new Customer() {CustomerID = 22, Name = "Skoshop", Street = "Hovedgaden", Mail = "sko@mail.com", Phone = "123456789", Zipcode = "2000", City = "Mellemby", Status = false });
+            apiHelperSingleton = new ApiHelper();
+            Task gcTask = apiHelperSingleton.getCustomers();
+            gcTask.Wait();
+            
+            //old test data
+            //MyCustomerList.Add(new Customer() { CustomerID = 20, Name = "Idefabrikken", Street = "Hovedgaden", Mail = "ide@mail.com", Phone = "123456789", Zipcode = "6000", City = "Lilleby", Status = true }) ;
+            //MyCustomers.Add(new Customer() {CustomerID = 21, Name = "Slikbutikken", Street = "Hovedgaden", Mail = "is@mail.com", Phone = "123456789", Zipcode = "9000", City = "Storeby", Status = true });
+            //MyCustomers.Add(new Customer() {CustomerID = 22, Name = "Skoshop", Street = "Hovedgaden", Mail = "sko@mail.com", Phone = "123456789", Zipcode = "2000", City = "Mellemby", Status = false });
         }
 
 

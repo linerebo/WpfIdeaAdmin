@@ -31,9 +31,8 @@ namespace WpfIdeaAdmin.View
             //store current window in public variable ContentControlRef
             ((App)App.Current).ContentControlRef = this.mainContent;
             this.mainContent.Content = new WelcomeMenuView();
-            ApiHelper testAPI = new ApiHelper();
-            testAPI.getCustomers();
-            
+            //ApiHelper testAPI = new ApiHelper();
+            //((App)App.Current).viewmodel.apiHelperSingleton.getCustomers();
         }
     }
 }

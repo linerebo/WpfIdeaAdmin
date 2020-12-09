@@ -41,12 +41,12 @@
         <Label Grid.Row="5" Grid.Column="1" Content=" By:" Style="{StaticResource DesignLabelblack}"></Label>
         <Label Grid.Row="6" Grid.Column="1" Content=" e-mail:" Style="{StaticResource DesignLabelblack}"></Label>
         <Label Grid.Row="7" Grid.Column="1" Content=" Telefon:" Style="{StaticResource DesignLabelblack}"></Label>
-        <Label Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Content="{Binding SelectedCustomer.Name}" Style="{StaticResource DesignLabelblack}"></Label>
-        <Label Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Content="{Binding SelectedCustomer.Street}" Style="{StaticResource DesignLabelblack}"></Label>
-        <Label Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Content="{Binding SelectedCustomer.Zipcode}" Style="{StaticResource DesignLabelblack}"></Label>
-        <Label Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" Content="{Binding SelectedCustomer.City}" Style="{StaticResource DesignLabelblack}"></Label>
-        <Label Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" Content="{Binding SelectedCustomer.Mail}" Style="{StaticResource DesignLabelblack}"></Label>
-        <Label Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" Content="{Binding SelectedCustomer.Phone}" Style="{StaticResource DesignLabelblack}"></Label>
+        <Label Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Content="{Binding SelectedCustomer.CustomerName}" Style="{StaticResource DesignLabelblack}"></Label>
+        <Label Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Content="{Binding SelectedCustomer.CustomerStreet}" Style="{StaticResource DesignLabelblack}"></Label>
+        <Label Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Content="{Binding SelectedCustomer.Zip}" Style="{StaticResource DesignLabelblack}"></Label>
+        <Label Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" Content="{Binding SelectedCustomer.CustomerCity}" Style="{StaticResource DesignLabelblack}"></Label>
+        <Label Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" Content="{Binding SelectedCustomer.CustomerMail}" Style="{StaticResource DesignLabelblack}"></Label>
+        <Label Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" Content="{Binding SelectedCustomer.CustomerPhone}" Style="{StaticResource DesignLabelblack}"></Label>
         <Button Grid.Row="2" Grid.Column="5" Content="Deaktiver" Style="{StaticResource DesignButton}" Command="{Binding DeactivateCmd}"></Button>
         <Button Grid.Row="4" Grid.Column="5" Content="Fortryd" Style="{StaticResource DesignButton}" Command="{Binding CancelCmd}"></Button>
         <Button Grid.Row="7" Grid.Column="5" Content="Slet kunde" Style="{StaticResource DesignButton}" Command="{Binding DeleteCmd}"></Button>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfIdeaAdmin.ViewModel;
 
 namespace WpfIdeaAdmin.View
 {
@@ -23,7 +24,7 @@ namespace WpfIdeaAdmin.View
         public AddCustomerView()
         {
             InitializeComponent();
-            this.DataContext = ((App)App.Current).viewmodel;
+            this.DataContext = new AddCustomerViewModel();
         }
     }
 }

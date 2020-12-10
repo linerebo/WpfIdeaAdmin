@@ -11,7 +11,10 @@ namespace WpfIdeaAdmin.ViewModel
 {
     public class ViewModelMainWindow
     {
-        
+        public ViewModelMainWindow()
+        {
+            ((App)App.Current).ContentControlRef.Content = new WelcomeMenuView();
+        }
 
     }
 }

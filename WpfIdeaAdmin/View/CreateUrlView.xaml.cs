@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfIdeaAdmin.Model;
+using WpfIdeaAdmin.ViewModel;
 
 namespace WpfIdeaAdmin.View
 {
@@ -24,7 +25,7 @@ namespace WpfIdeaAdmin.View
         public CreateUrlView()
         {
             InitializeComponent();
-            this.DataContext = ((App)App.Current).viewmodel;
+            this.DataContext = new CreateUrlViewModel();
         }
     }
 }

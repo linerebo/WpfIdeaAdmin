@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,16 +11,25 @@ using WpfIdeaAdmin.ViewModel.Commands;
 
 namespace WpfIdeaAdmin.ViewModel
 {
-    public class WelcomeMenuViewModel
+    public class WelcomeMenuViewModel : Bindable
     {
-        public List<Customer> MyCustomers { get; set; }
+        private SingletonSharedData singleSharedData;
+        private ObservableCollection<Customer> myCutomerList;
+        public ObservableCollection<Customer> MyCustomerList { get { return myCutomerList; } set { myCutomerList = value; this.propertyIsChanged(); } }
+        public Customer SelectedCustomer { get; set; }
+        public Model.ApiHelper apiHelperSingleton { get; set; }
+        public Customer NewCustomer { get; set; }
+
+
         public WelcomeMenuViewModel()
         {
-            MyCustomers = new List<Customer>();
-
-            //MyCustomers.Add(new Customer() { Name = "Idefabrikken", Street = "Hovedgaden", Mail = "ide@mail.com", Phone = "123456789", Zipcode = "6000", City = "Lilleby", Status = true }) ;
-            //MyCustomers.Add(new Customer() { Name = "Slikbutikken", Street = "Hovedgaden", Mail = "is@mail.com", Phone = "123456789", Zipcode = "9000", City = "Storeby", Status = true });
-            //MyCustomers.Add(new Customer() { Name = "Skoshop", Street = "Hovedgaden", Mail = "sko@mail.com", Phone = "123456789", Zipcode = "2000", City = "Mellemby", Status = false });
+            singleSharedData = SingletonSharedData.getInstance();
+            NewCustomer = new Customer();
+            SelectedCustomer = new Customer();
+            NewCustomer.CustomerName = "testName";
+            apiHelperSingleton = new ApiHelper();
+            //calling the getCustomers() method in the ApiHelper class to get Customers from DB
+            MyCustomerList = apiHelperSingleton.getCustomers();
         }
         
 
@@ -29,18 +39,24 @@ namespace WpfIdeaAdmin.ViewModel
                 ((App)App.Current).ContentControlRef.Content = new AddCustomerView();
             });
 
+
         public ICommand CreateURLCmd => new CustomerCommand(
             () =>
             {
+                //(Console.WriteLine("SelectedCustomer fra welcome: " + singleSharedData.SelectedCustomer.CustomerName);
+                Console.WriteLine("SelctedCustomer: " + SelectedCustomer.CustomerName);
+                //Customer SelectedCustomer = new Customer(); //test
                 ((App)App.Current).ContentControlRef.Content = new CreateUrlView();
                 
             });
+
 
         public ICommand EditCustomerCmd => new CustomerCommand(
             () =>
             {
                 ((App)App.Current).ContentControlRef.Content = new EditCustomerView();
             });
+
 
         public ICommand DeactivateCustomerCmd => new CustomerCommand(
             () =>

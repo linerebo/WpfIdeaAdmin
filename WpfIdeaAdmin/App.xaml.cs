@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using WpfIdeaAdmin.View;
 using WpfIdeaAdmin.ViewModel;
 
 namespace WpfIdeaAdmin
@@ -17,5 +18,12 @@ namespace WpfIdeaAdmin
     {
         public ContentControl ContentControlRef { get; set; } = null;
         public AdministratorViewModel viewmodel = new AdministratorViewModel();
+
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+
+           
+        }
     }
 }

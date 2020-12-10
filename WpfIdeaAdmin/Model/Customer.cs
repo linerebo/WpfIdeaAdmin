@@ -58,18 +58,11 @@ namespace WpfIdeaAdmin.Model
             set { _customerStreet = value; this.propertyIsChanged(); }
         }
 
-        private string _zipCode;
-        public string Zip
+        private ZipCode zipCode;
+        public ZipCode ZipCode
         {
-            get { return _zipCode; }
-            set { _zipCode = value;  this.propertyIsChanged(); }
-        }
-
-        private string city;
-        public string City
-        {
-            get { return city; }
-            set { city = value; this.propertyIsChanged(); }
+            get { return zipCode; }
+            set { zipCode = value;this.propertyIsChanged(); }
         }
     }
 }

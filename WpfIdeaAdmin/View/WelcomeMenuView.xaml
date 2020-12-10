@@ -36,7 +36,7 @@
         <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource DesignLabelHeader2}" Content=" Kunder"></Label>
 
         <Label Grid.Row="1" Grid.Column="3" Style="{StaticResource DesignLabelHeader2}" Content=" Kundekort"></Label>
-        <ListView x:Name="lvCustomers" Grid.Row="2" Grid.Column="0" Grid.RowSpan="12" ItemsSource="{Binding apiHelperSingleton.CustomerList}" SelectedItem="{Binding SelectedCustomer}">
+        <ListView x:Name="lvCustomers" Grid.Row="2" Grid.Column="0" Grid.RowSpan="12" ItemsSource="{Binding MyCustomerList}" SelectedItem="{Binding SelectedCustomer}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn DisplayMemberBinding="{Binding CustomerID}" Header="ID" Width="50"></GridViewColumn>
@@ -54,8 +54,8 @@
         <Label Grid.Row="7" Grid.Column="3" Content=" Telefon:" Style="{StaticResource DesignLabelblack}"></Label>
         <Label x:Name="lbCustomerName" Content="{Binding ElementName=lvCustomers, Path=SelectedItem.CustomerName}" Grid.Row="2" Grid.Column="4" Style="{StaticResource DesignLabelblack}"></Label>
         <Label Content="{Binding ElementName=lvCustomers, Path=SelectedItem.CustomerStreet}" Grid.Row="3" Grid.Column="4" Style="{StaticResource DesignLabelblack}"></Label>
-        <Label Content="{Binding ElementName=lvCustomers, Path=SelectedItem.Zip}" Grid.Row="4" Grid.Column="4" Style="{StaticResource DesignLabelblack}"></Label>
-        <Label Content="{Binding ElementName=lvCustomers, Path=SelectedItem.CustomerCity}" Grid.Row="5" Grid.Column="4" Style="{StaticResource DesignLabelblack}"></Label>
+        <Label Content="{Binding ElementName=lvCustomers, Path=SelectedItem.ZipCode.Zip}" Grid.Row="4" Grid.Column="4" Style="{StaticResource DesignLabelblack}"></Label>
+        <Label Content="{Binding ElementName=lvCustomers, Path=SelectedItem.ZipCode.ZipCodeCity}" Grid.Row="5" Grid.Column="4" Style="{StaticResource DesignLabelblack}"></Label>
         <Label Content="{Binding ElementName=lvCustomers, Path=SelectedItem.CustomerMail}" Grid.Row="6" Grid.Column="4" Style="{StaticResource DesignLabelblack}"></Label>
         <Label Content="{Binding ElementName=lvCustomers, Path=SelectedItem.CustomerPhone}" Grid.Row="7" Grid.Column="4" Style="{StaticResource DesignLabelblack}"></Label>
         <Button Grid.Row="1" Grid.Column="6" Content="Tilføj kunde" Style="{StaticResource DesignButton}" Command="{Binding AddCustomerCmd}"></Button>

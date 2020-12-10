@@ -15,39 +15,41 @@ namespace WpfIdeaAdmin.Model
 {
     public class ApiHelper
     {
-        public HttpClient client { get; set; } = new HttpClient();
+        private HttpClient client;
         public Customer customer { get; set; }
         public ObservableCollection<Customer> CustomerList { get; set; } = new ObservableCollection<Customer>();
         public Customer SelectedCustomer { get; set; }
 
-        public async Task getCustomers()
+        //get customers as json string from db/api and convert to Customer objects
+        public ObservableCollection<Customer> getCustomers()
         {
+            client = new HttpClient();
             //setting the base address
             client.BaseAddress = new Uri("https://localhost:44390/");
             //adding an accept header for JSON format
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             //sending HHTP request
-            HttpResponseMessage response =  await client.GetAsync("https://localhost:44390/api/Customers");
+            HttpResponseMessage response =  client.GetAsync("https://localhost:44390/api/Customers").Result;
             response.EnsureSuccessStatusCode();
-            var resp = await response.Content.ReadAsStringAsync();
+            var resp =  response.Content.ReadAsStringAsync().Result;
             //converting json string to customer objects
-            CustomerList = JsonConvert.DeserializeObject<ObservableCollection<Customer>>(resp);
-            
-            Console.WriteLine("CustomerList Antal: " + CustomerList.Count);
-            Console.WriteLine(CustomerList);
+            return JsonConvert.DeserializeObject<ObservableCollection<Customer>>(resp);
         }
 
-        public void AddCustomer()
+        //method for adding new customer and post the json string to api/db
+        public void AddCustomer(Customer NewCustomer)
         {
+            client = new HttpClient();
             client.BaseAddress = new Uri("http://localhost:44390/");
             //adding an accept header for JSON format
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-            //var customer = new Customer();
-            
-
-            
+            string json = JsonConvert.SerializeObject(NewCustomer);
+            var stringContent = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
+            Console.WriteLine("json " +json);
+            HttpResponseMessage response = client.PostAsync("https://localhost:44390/api/Customers", stringContent).Result;
+            response.EnsureSuccessStatusCode();
+            var resp = response.Content.ReadAsStringAsync().Result;
+            Console.WriteLine("resp: " + resp);
         }
-        
     }
 }

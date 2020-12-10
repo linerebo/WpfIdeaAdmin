@@ -8,7 +8,7 @@
         Title="MainWindow" Height="850" Width="1400">
     <StackPanel>
         <ContentControl x:Name="mainContent" Width="1400" Height="850" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-
+            <Label Content="it worked" ></Label>
         </ContentControl>
     </StackPanel>
 </Window>

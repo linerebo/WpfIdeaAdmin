@@ -71,6 +71,8 @@
     <Compile Include="Model\ApiHelper.cs" />
     <Compile Include="Model\Bindable.cs" />
     <Compile Include="Model\Customer.cs" />
+    <Compile Include="Model\SingletonSharedData.cs" />
+    <Compile Include="Model\ZipCode.cs" />
     <Compile Include="ViewModel\AddCustomerViewModel.cs" />
     <Compile Include="ViewModel\AdministratorViewModel.cs" />
     <Compile Include="ViewModel\Commands\CustomerCommand.cs" />

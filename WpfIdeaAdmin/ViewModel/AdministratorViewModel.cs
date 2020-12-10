@@ -11,28 +11,34 @@ using WpfIdeaAdmin.ViewModel.Commands;
 
 namespace WpfIdeaAdmin.ViewModel
 {
-    public class AdministratorViewModel
+    public class AdministratorViewModel : Bindable
     {
-        public List<Customer> MyCustomerList { get; set; }
-        public Customer SelectedCustomer { get; set; }
+        private ObservableCollection<Customer> myCutomerList;
+        public ObservableCollection<Customer> MyCustomerList { get { return myCutomerList; } set { myCutomerList = value; this.propertyIsChanged(); } }
+        //public Customer SelectedCustomer { get; set; }
         public Model.ApiHelper apiHelperSingleton { get; set; }
+        public Customer NewCustomer { get; set; }
         
         public AdministratorViewModel()
         {
+            NewCustomer = new Customer();
+            NewCustomer.CustomerName = "testName";
             apiHelperSingleton = new ApiHelper();
-            Task gcTask = apiHelperSingleton.getCustomers();
-            gcTask.Wait();
+            //calling the getCustomers() method in the ApiHelper class to get Customers from DB
+            //Task gcTask = apiHelperSingleton.getCustomers();
             
-            //old test data
-            //MyCustomerList.Add(new Customer() { CustomerID = 20, Name = "Idefabrikken", Street = "Hovedgaden", Mail = "ide@mail.com", Phone = "123456789", Zipcode = "6000", City = "Lilleby", Status = true }) ;
-            //MyCustomers.Add(new Customer() {CustomerID = 21, Name = "Slikbutikken", Street = "Hovedgaden", Mail = "is@mail.com", Phone = "123456789", Zipcode = "9000", City = "Storeby", Status = true });
-            //MyCustomers.Add(new Customer() {CustomerID = 22, Name = "Skoshop", Street = "Hovedgaden", Mail = "sko@mail.com", Phone = "123456789", Zipcode = "2000", City = "Mellemby", Status = false });
+            ////waiting for the task to be completed
+            //gcTask.Wait();
+            //MyCustomerList = apiHelperSingleton.CustomerList;
+
+            
         }
 
 
         public ICommand AddCustomerCmd => new CustomerCommand(
             () =>
             {
+                
                 ((App)App.Current).ContentControlRef.Content = new AddCustomerView();
             });
 
@@ -56,9 +62,14 @@ namespace WpfIdeaAdmin.ViewModel
             });
 
         public ICommand SaveCmd => new CustomerCommand(
-            () =>
+            async() =>
             {
+                //check if name is added mm
+                //Task addTask = apiHelperSingleton.AddCustomer(NewCustomer);
+                //addTask.Wait();
                 ((App)App.Current).ContentControlRef.Content = new WelcomeMenuView();
+                MyCustomerList = apiHelperSingleton.getCustomers();
+
             });
 
         public ICommand CancelCmd => new CustomerCommand(

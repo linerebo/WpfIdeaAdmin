@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfIdeaAdmin.Model;
+using WpfIdeaAdmin.ViewModel;
 
 namespace WpfIdeaAdmin.View
 
@@ -26,13 +27,10 @@ namespace WpfIdeaAdmin.View
         {
             
             InitializeComponent();
-            this.DataContext = ((App)App.Current).viewmodel;
 
-            //store current window in public variable ContentControlRef
             ((App)App.Current).ContentControlRef = this.mainContent;
-            this.mainContent.Content = new WelcomeMenuView();
-            //ApiHelper testAPI = new ApiHelper();
-            //((App)App.Current).viewmodel.apiHelperSingleton.getCustomers();
+
+            this.DataContext = new ViewModelMainWindow();
         }
     }
 }

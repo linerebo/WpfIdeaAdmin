@@ -4,13 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using WpfIdeaAdmin.Model;
 using WpfIdeaAdmin.View;
 using WpfIdeaAdmin.ViewModel.Commands;
 
 namespace WpfIdeaAdmin.ViewModel
 {
-    class EditCustomerViewModel
+    public class EditCustomerViewModel : Bindable
     {
+        public SingletonSharedData singleSharedData { get; set; }
+        public Model.ApiHelper apiHelperSingleton { get; set; }
+
+        public EditCustomerViewModel()
+        {
+            singleSharedData = SingletonSharedData.getInstance();
+            apiHelperSingleton = new ApiHelper();
+        }
+
         public ICommand SaveCmd => new CustomerCommand(
             () =>
             {

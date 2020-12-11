@@ -10,10 +10,11 @@ using WpfIdeaAdmin.ViewModel.Commands;
 
 namespace WpfIdeaAdmin.ViewModel
 {
-    public class DeleteCustomerViewModel
+    public class DeleteCustomerViewModel : Bindable
     {
-        private SingletonSharedData singleSharedData;
+        public SingletonSharedData singleSharedData { get; set; }
         public Model.ApiHelper apiHelperSingleton { get; set; }
+
         public DeleteCustomerViewModel()
         {
             singleSharedData = SingletonSharedData.getInstance();

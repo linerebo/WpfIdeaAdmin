@@ -13,10 +13,10 @@ namespace WpfIdeaAdmin.ViewModel
 {
     public class WelcomeMenuViewModel : Bindable
     {
-        private SingletonSharedData singleSharedData;
+        public SingletonSharedData singleSharedData { get; set; }
         private ObservableCollection<Customer> myCutomerList;
         public ObservableCollection<Customer> MyCustomerList { get { return myCutomerList; } set { myCutomerList = value; this.propertyIsChanged(); } }
-        public Customer SelectedCustomer { get; set; }
+        
         public Model.ApiHelper apiHelperSingleton { get; set; }
         public Customer NewCustomer { get; set; }
 
@@ -25,7 +25,7 @@ namespace WpfIdeaAdmin.ViewModel
         {
             singleSharedData = SingletonSharedData.getInstance();
             NewCustomer = new Customer();
-            SelectedCustomer = new Customer();
+            
             NewCustomer.CustomerName = "testName";
             apiHelperSingleton = new ApiHelper();
             //calling the getCustomers() method in the ApiHelper class to get Customers from DB
@@ -44,7 +44,7 @@ namespace WpfIdeaAdmin.ViewModel
             () =>
             {
                 //(Console.WriteLine("SelectedCustomer fra welcome: " + singleSharedData.SelectedCustomer.CustomerName);
-                Console.WriteLine("SelctedCustomer: " + SelectedCustomer.CustomerName);
+                //Console.WriteLine("SelctedCustomer: " + SingletonSharedData.getInstance().SelectedCustomer.CustomerName);
                 //Customer SelectedCustomer = new Customer(); //test
                 ((App)App.Current).ContentControlRef.Content = new CreateUrlView();
                 

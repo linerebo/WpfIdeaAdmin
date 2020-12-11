@@ -18,7 +18,7 @@ namespace WpfIdeaAdmin.Model
         private HttpClient client;
         public Customer customer { get; set; }
         public ObservableCollection<Customer> CustomerList { get; set; } = new ObservableCollection<Customer>();
-        public Customer SelectedCustomer { get; set; }
+        //public Customer SelectedCustomer { get; set; }
 
         //get customers as json string from db/api and convert to Customer objects
         public ObservableCollection<Customer> getCustomers()

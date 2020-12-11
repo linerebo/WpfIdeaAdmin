@@ -43,8 +43,8 @@
         <Label Grid.Row="7" Grid.Column="1" Content=" Telefon:" Style="{StaticResource DesignLabelblack}"></Label>
         <TextBox Text="{Binding NewCustomer.CustomerName, Mode=TwoWay}" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Style="{StaticResource inputTextBox}"></TextBox>
         <TextBox Text="{Binding NewCustomer.CustomerStreet, Mode=TwoWay}" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Style="{StaticResource inputTextBox}"></TextBox>
-        <TextBox Text="{Binding NewCustomer.CustomerZipCode, Mode=TwoWay}" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Style="{StaticResource inputTextBox}"></TextBox>
-        <Label Content="{Binding NewCustomer.CustomerCity, Mode=TwoWay}" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" Style="{StaticResource DesignLabelblack}"></Label>
+        <TextBox Text="{Binding NewCustomer.ZipCode.Zip, Mode=TwoWay}" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Style="{StaticResource inputTextBox}"></TextBox>
+        <Label Content="{Binding NewCustomer.ZipCode.ZipCodeCity, Mode=TwoWay}" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" Style="{StaticResource DesignLabelblack}"></Label>
         <TextBox Text="{Binding NewCustomer.CustomerMail, Mode=TwoWay}" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" Style="{StaticResource inputTextBox}"></TextBox>
         <TextBox Text="{Binding NewCustomer.CustomerPhone, Mode=TwoWay}" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" Style="{StaticResource inputTextBox}"></TextBox>
 

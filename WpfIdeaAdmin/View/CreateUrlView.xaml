@@ -42,11 +42,11 @@
         <Label Grid.Row="6" Grid.Column="1" Content=" e-mail:" Style="{StaticResource DesignLabelblack}"></Label>
         <Label Grid.Row="7" Grid.Column="1" Content=" Telefon:" Style="{StaticResource DesignLabelblack}"></Label>
         <Label Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Content="{Binding singleSharedData.SelectedCustomer.CustomerName}" Style="{StaticResource DesignLabelblack}"></Label>
-        <Label Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Content="{Binding SelectedCustomer.CustomerStreet}" Style="{StaticResource DesignLabelblack}"></Label>
-        <Label Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Content="{Binding SelectedCustomer.Zip}" Style="{StaticResource DesignLabelblack}"></Label>
-        <Label Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" Content="{Binding SelectedCustomer.CustomerCity}" Style="{StaticResource DesignLabelblack}"></Label>
-        <Label Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" Content="{Binding SelectedCustomer.CustomerMail}" Style="{StaticResource DesignLabelblack}"></Label>
-        <Label Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" Content="{Binding SelectedCustomer.CustomerPhone}" Style="{StaticResource DesignLabelblack}"></Label>
+        <Label Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Content="{Binding singleSharedData.SelectedCustomer.CustomerStreet}" Style="{StaticResource DesignLabelblack}"></Label>
+        <Label Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Content="{Binding singleSharedData.SelectedCustomer.ZipCode.Zip}" Style="{StaticResource DesignLabelblack}"></Label>
+        <Label Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" Content="{Binding singleSharedData.SelectedCustomer.ZipCode.ZipCodeCity}" Style="{StaticResource DesignLabelblack}"></Label>
+        <Label Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" Content="{Binding singleSharedData.SelectedCustomer.CustomerMail}" Style="{StaticResource DesignLabelblack}"></Label>
+        <Label Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" Content="{Binding singleSharedData.SelectedCustomer.CustomerPhone}" Style="{StaticResource DesignLabelblack}"></Label>
         <Button Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="2" Content="Lav URL" Style="{StaticResource DesignButton}"></Button>
         <Label Grid.Row="11" Grid.Column="1" Grid.ColumnSpan="4" Style="{StaticResource DesignLabelblack}"></Label>
 

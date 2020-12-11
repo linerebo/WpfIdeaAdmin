@@ -13,12 +13,12 @@ namespace WpfIdeaAdmin.ViewModel
 {
     public class AddCustomerViewModel : Bindable
     {
-        private SingletonSharedData singleSharedData;
+        public SingletonSharedData singleSharedData { get; set; }
         private ObservableCollection<Customer> myCutomerList;
         public ObservableCollection<Customer> MyCustomerList { get { return myCutomerList; } set { myCutomerList = value; this.propertyIsChanged(); } }
-        public Customer SelectedCustomer { get; set; }
         public Model.ApiHelper apiHelperSingleton { get; set; }
         public Customer NewCustomer { get; set; }
+
 
         public AddCustomerViewModel()
         {
@@ -33,12 +33,11 @@ namespace WpfIdeaAdmin.ViewModel
                 //check if CustomerName is null
                 if (NewCustomer.CustomerName == null) 
                 {
-                    Console.WriteLine("Indtast navn");  //change to messagebox or label
+                    Console.WriteLine("Indtast navn");  //change to messagebox or show text in NewCustomer.Name in View
                 }
                 else
                 {
                     apiHelperSingleton.AddCustomer(NewCustomer);
-                    //addTask.Wait();
                     ((App)App.Current).ContentControlRef.Content = new WelcomeMenuView();
                     MyCustomerList = apiHelperSingleton.getCustomers();
                 }

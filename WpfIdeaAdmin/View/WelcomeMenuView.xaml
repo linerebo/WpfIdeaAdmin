@@ -36,7 +36,7 @@
         <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource DesignLabelHeader2}" Content=" Kunder"></Label>
 
         <Label Grid.Row="1" Grid.Column="3" Style="{StaticResource DesignLabelHeader2}" Content=" Kundekort"></Label>
-        <ListView x:Name="lvCustomers" Grid.Row="2" Grid.Column="0" Grid.RowSpan="12" ItemsSource="{Binding MyCustomerList}" SelectedItem="{Binding SelectedCustomer}">
+        <ListView x:Name="lvCustomers" Grid.Row="2" Grid.Column="0" Grid.RowSpan="12" ItemsSource="{Binding MyCustomerList}" SelectedItem="{Binding singleSharedData.SelectedCustomer}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn DisplayMemberBinding="{Binding CustomerID}" Header="ID" Width="50"></GridViewColumn>

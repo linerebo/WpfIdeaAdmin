@@ -38,7 +38,7 @@ namespace WpfIdeaAdmin.ViewModel
         public ICommand SaveCmd => new CustomerCommand(
             async () =>
             {
-                //Input validation, check if CustomerName is null
+                //input validation, check if CustomerName is null
                 if (NewCustomer.CustomerName == null) 
                 {
                     ShowLabelName = true;

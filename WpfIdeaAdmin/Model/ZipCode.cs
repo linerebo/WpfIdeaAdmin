@@ -15,11 +15,11 @@ namespace WpfIdeaAdmin.Model
             set { _zipCode = value; this.propertyIsChanged(); }
         }
 
-        private string zipCodeCity;
+        private string _zipCodeCity;
         public string ZipCodeCity
         {
-            get { return zipCodeCity; }
-            set { zipCodeCity = value; this.propertyIsChanged(); }
+            get { return _zipCodeCity; }
+            set { _zipCodeCity = value; this.propertyIsChanged(); }
         }
     }
 }

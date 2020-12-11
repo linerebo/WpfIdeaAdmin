@@ -15,6 +15,7 @@ namespace WpfIdeaAdmin.Model
 
         private static SingletonSharedData sharedData;
         public Customer SelectedCustomer { get; set; }
+        public Customer NewCustomer { get; set; }
 
         public static SingletonSharedData getInstance()
         {

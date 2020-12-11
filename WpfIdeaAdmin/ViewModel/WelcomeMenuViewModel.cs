@@ -24,9 +24,9 @@ namespace WpfIdeaAdmin.ViewModel
         public WelcomeMenuViewModel()
         {
             singleSharedData = SingletonSharedData.getInstance();
-            NewCustomer = new Customer();
+            //NewCustomer = new Customer();
             
-            NewCustomer.CustomerName = "testName";
+            //NewCustomer.CustomerName = "testName";
             apiHelperSingleton = new ApiHelper();
             //calling the getCustomers() method in the ApiHelper class to get Customers from DB
             MyCustomerList = apiHelperSingleton.getCustomers();

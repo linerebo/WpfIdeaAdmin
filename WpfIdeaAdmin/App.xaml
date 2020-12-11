@@ -39,6 +39,11 @@
             <Setter Property="BorderBrush" Value="Teal"></Setter>
             <Setter Property="BorderThickness" Value="2"></Setter>
         </Style>
+        <Style TargetType="Label" x:Key="DesignLabelRed">
+            <Setter Property="FontSize" Value="28"></Setter>
+            <Setter Property="Foreground" Value="Red"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
         <Style TargetType="TextBox" x:Key="inputTextBox">
             <Setter Property="FontSize" Value="25"></Setter>
             <Setter Property="Background" Value="LightYellow"></Setter>

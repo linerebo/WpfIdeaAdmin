@@ -6,6 +6,10 @@
              xmlns:local="clr-namespace:WpfIdeaAdmin.View"
              mc:Ignorable="d" 
              d:DesignHeight="850" d:DesignWidth="1400">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="Converter"/>
+    </UserControl.Resources>
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="60"></ColumnDefinition>
@@ -42,10 +46,12 @@
         <Label Grid.Row="6" Grid.Column="1" Content=" e-mail:" Style="{StaticResource DesignLabelblack}"></Label>
         <Label Grid.Row="7" Grid.Column="1" Content=" Telefon:" Style="{StaticResource DesignLabelblack}"></Label>
         <TextBox Text="{Binding NewCustomer.CustomerName, Mode=TwoWay}" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Style="{StaticResource inputTextBox}"></TextBox>
+        <Label Content="   Indtast navn" Visibility="{Binding Path=ShowLabelName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource Converter}}" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2" Style="{StaticResource DesignLabelRed}"></Label>
         <TextBox Text="{Binding NewCustomer.CustomerStreet, Mode=TwoWay}" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Style="{StaticResource inputTextBox}"></TextBox>
         <TextBox Text="{Binding NewCustomer.ZipCode.Zip, Mode=TwoWay}" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Style="{StaticResource inputTextBox}"></TextBox>
         <Label Content="{Binding NewCustomer.ZipCode.ZipCodeCity, Mode=TwoWay}" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" Style="{StaticResource DesignLabelblack}"></Label>
         <TextBox Text="{Binding NewCustomer.CustomerMail, Mode=TwoWay}" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" Style="{StaticResource inputTextBox}"></TextBox>
+        <Label Content="   Indtast mail" Visibility="{Binding Path=ShowLabelMail, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource Converter}}" Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="2" Style="{StaticResource DesignLabelRed}"></Label>
         <TextBox Text="{Binding NewCustomer.CustomerPhone, Mode=TwoWay}" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" Style="{StaticResource inputTextBox}"></TextBox>
 
         <Viewbox Height="40" Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left">

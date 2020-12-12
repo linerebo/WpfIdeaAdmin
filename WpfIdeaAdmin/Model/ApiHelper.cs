@@ -45,7 +45,7 @@ namespace WpfIdeaAdmin.Model
         //method for adding new customer and post the json string to api/db
         public void AddCustomer(Customer NewCustomer)
         {
-            Console.WriteLine("new customer zip: " + NewCustomer.ZipCode.Zip);
+            Console.WriteLine("new customer zip: " + NewCustomer.Zip); // JC deleted ZipCode in between
             client = new HttpClient();
             client.BaseAddress = new Uri("http://localhost:44390/");
             //adding an accept header for JSON format

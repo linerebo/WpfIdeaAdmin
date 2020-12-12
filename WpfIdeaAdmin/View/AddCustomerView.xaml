@@ -48,7 +48,7 @@
         <TextBox Text="{Binding NewCustomer.CustomerName, Mode=TwoWay}" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Style="{StaticResource inputTextBox}"></TextBox>
         <Label Content="   Indtast navn" Visibility="{Binding Path=ShowLabelName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource Converter}}" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2" Style="{StaticResource DesignLabelRed}"></Label>
         <TextBox Text="{Binding NewCustomer.CustomerStreet, Mode=TwoWay}" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Style="{StaticResource inputTextBox}"></TextBox>
-        <TextBox Text="{Binding NewCustomer.ZipCode.Zip, Mode=TwoWay}" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Style="{StaticResource inputTextBox}"></TextBox>
+        <TextBox Text="{Binding NewCustomer.Zip, Mode=TwoWay}" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Style="{StaticResource inputTextBox}"></TextBox>
         <Label  Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" Style="{StaticResource DesignLabelblack}"></Label>
         <TextBox Text="{Binding NewCustomer.CustomerMail, Mode=TwoWay}" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" Style="{StaticResource inputTextBox}"></TextBox>
         <Label Content="   Indtast mail" Visibility="{Binding Path=ShowLabelMail, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource Converter}}" Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="2" Style="{StaticResource DesignLabelRed}"></Label>

@@ -33,29 +33,38 @@ namespace WpfIdeaAdmin.ViewModel
             ShowLabelMail = false;
         }
 
-        
+        public void CheckInputNewCustomer()
+        {
+            //input validation, check if CustomerName is null
+            if (NewCustomer.CustomerName == null)
+            {
+                ShowLabelName = true;
+            }
+            //input validation, check if CustomerMail is null
+            else if (NewCustomer.CustomerMail == null)
+            {
+                ShowLabelMail = true;
+            }
+            else
+            {
+                StoreNewCustomer();
+            }
+        }
+
+        public void StoreNewCustomer()
+        {
+            apiHelperSingleton.AddCustomer(NewCustomer);
+            ((App)App.Current).ContentControlRef.Content = new WelcomeMenuView();
+            MyCustomerList = apiHelperSingleton.getCustomers();
+        }
+
 
         public ICommand SaveCmd => new CustomerCommand(
             async () =>
             {
-                //input validation, check if CustomerName is null
-                if (NewCustomer.CustomerName == null) 
-                {
-                    ShowLabelName = true;
-                }
-                //input validation, check if CustomerMail is null
-                else if(NewCustomer.CustomerMail == null)
-                {
-                    ShowLabelMail = true;
-                }
-                else
-                {
-                    apiHelperSingleton.AddCustomer(NewCustomer);
-                    ((App)App.Current).ContentControlRef.Content = new WelcomeMenuView();
-                    MyCustomerList = apiHelperSingleton.getCustomers();
-                }
-
+                CheckInputNewCustomer();
             });
+           
 
         public ICommand CancelCmd => new CustomerCommand(
             () =>

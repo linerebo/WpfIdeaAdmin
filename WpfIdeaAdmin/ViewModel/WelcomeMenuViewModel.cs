@@ -24,9 +24,6 @@ namespace WpfIdeaAdmin.ViewModel
         public WelcomeMenuViewModel()
         {
             singleSharedData = SingletonSharedData.getInstance();
-            //NewCustomer = new Customer();
-            
-            //NewCustomer.CustomerName = "testName";
             apiHelperSingleton = new ApiHelper();
             //calling the getCustomers() method in the ApiHelper class to get Customers from DB
             MyCustomerList = apiHelperSingleton.getCustomers();
@@ -43,9 +40,6 @@ namespace WpfIdeaAdmin.ViewModel
         public ICommand CreateURLCmd => new CustomerCommand(
             () =>
             {
-                //(Console.WriteLine("SelectedCustomer fra welcome: " + singleSharedData.SelectedCustomer.CustomerName);
-                //Console.WriteLine("SelctedCustomer: " + SingletonSharedData.getInstance().SelectedCustomer.CustomerName);
-                //Customer SelectedCustomer = new Customer(); //test
                 ((App)App.Current).ContentControlRef.Content = new CreateUrlView();
                 
             });

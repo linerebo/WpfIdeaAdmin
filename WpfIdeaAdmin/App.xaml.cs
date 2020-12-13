@@ -17,7 +17,6 @@ namespace WpfIdeaAdmin
     public partial class App : Application
     {
         public ContentControl ContentControlRef { get; set; } = null;
-        public AdministratorViewModel viewmodel = new AdministratorViewModel();
 
         protected override void OnStartup(StartupEventArgs e)
         {
